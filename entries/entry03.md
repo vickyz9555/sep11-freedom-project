@@ -1,10 +1,14 @@
-# Entry 3
+# Tinkering with Kaboom
 
+### Content
+
+##### Changing Background Color
 ```js
 kaboom({
   background: [ 0, 200, 255 ],
 })
 ```
+
 
 ```js
 loadSprite("cinamoroll", "/sprites/cinamoroll.png")
