@@ -13,6 +13,8 @@ kaboom({
 })
 ```
 
+#### Adding Multi Objects
+
 ```js
 loadSprite("cinamoroll", "/sprites/cinamoroll.png")
 loadSprite("coin", "/sprites/coin.png")
@@ -49,6 +51,11 @@ Examples:
 
 ![Screenshot 2023-02-12 10 27 54 PM](https://user-images.githubusercontent.com/91750499/218363804-cfc98bd7-3920-4ccb-a9bd-4954fe305aa6.png)
 
+#### Collision 
+* `area()` - gives the object a collider, which enables collision checking
+* `solid()` - makes the object can't move pass other solid objects
+
+##### ** Both objects must have the `area()` component in order to enable collision detection between 
 
 #### What I plan on learning next
 The plan for my next step is to learn how to make my sprite collect an object. After I completed that, I am thinking to learn about levels and adding them onto my mini platformer game to advance it. 
