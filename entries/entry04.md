@@ -16,9 +16,27 @@ Following the steps on our [MVP plan](https://docs.google.com/document/d/1szrDrb
 
 ![koala](https://user-images.githubusercontent.com/91750499/226217471-cc73ab54-22c8-475f-9af4-61c250ae4ff9.png)
 ![owl](https://user-images.githubusercontent.com/91750499/226219884-cb15141b-4f7f-41ad-8a74-7a11fb630285.png)
+![door](https://user-images.githubusercontent.com/91750499/229255806-54cf049a-07ef-4ba3-885d-5fbe7ec88d62.png)
 ![coin](https://user-images.githubusercontent.com/91750499/226217476-38f84490-37f2-41d3-8479-7c0b793ca6b1.png)
 ![key](https://user-images.githubusercontent.com/91750499/226219003-17be3e4a-09d4-45e3-9953-86491ddd1bd9.png)
 
+During the previous blog entry, I've had a brief intro to `solid()` and what it actually does. In the following code, I added a sprite onto the screen, including the `solid()` component which makes an object, in this case it's a sprite, can't move pass other solid objects. I added a sprite name block and also gave it the `solid()` component. Therefore, when I move the sprite near the block, it wouldn't go pass it, in other words, the block is acting as an obstable, blocking its way. 
+
+```js
+const player = add([
+  sprite("koala"),
+  pos(100,100),
+  area(),
+  solid(),
+])
+
+add([
+  sprite("block"),
+  pos(center()),
+  area(),
+  solid(),
+])
+```
 
 
 ### Engineering Design Process + Skills
