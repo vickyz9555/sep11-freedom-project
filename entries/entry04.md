@@ -37,7 +37,79 @@ add([
   solid(),
 ])
 ```
+#### Scenes
+```js
+scene("main", (levelIdx) => {
+  const levels = [ // level layout
+    // level 1
+    [
+      "=========================|===",
+      "=px x  x      x       xx    =",
+      "=  x           x      x     =",
+      "=    x  x           xx   x  =",
+      "= x  x            xx    x   =",
+      "=   x   x     x x           =",
+      "=          xxx              =",
+      "=   x  o         x     x    =",
+      "=        x     xx       x   =",
+      "=     x    x x   x  x       =",
+      "=x        x    x x x    kxx =",
+      "=    x       xxx     x      =",
+      "=============================",
+      ], 
+    // level 2
+    [
+      "=========================|===",
+      "=p  x   x xx     x    xxx   =",
+      "=  x           o      x     =",
+      "= xxx xxx xx     xx   x     =",
+      "= x  xxx          xx    x   =",
+      "=   x   xxx     x       x   =",
+      "=      x     xx  x   xxx    =",
+      "=   x    xx  xxx    x    x  =",
+      "=    x    x     xx       x  =",
+      "=   x xx k    x x   x  x   x=",
+      "=x        x  x x     xx     =",
+      "= x   x  x  x     x    x   x=",
+      "=============================",
+      ],
+    ]
+```
+For my mvp, I have added 2 levels to my main scene. In order to make these symbols (p, x, o, k, =, |) to work, I have assigned these symbols to its corresponding sprites. The code is shown below: 
 
+```js
+// assigning sprite to symbol
+  addLevel(levels[levelIdx],{
+    width: 64,
+    height: 64,
+    pos: vec2(64,64),
+    "=": () => [
+      sprite("block"),
+      area(),
+      solid(),
+      ],
+    "p": () => [
+      sprite("koala"),
+      area(),
+      solid(),
+      "player",
+      ],
+    "x": () => [
+      sprite("coin"),
+      area(),
+      "coin",
+      ],
+    "o": () => [
+      sprite("owl"),
+      area(),
+      solid(),
+      "character",
+      // message of the owl
+      { msg: "Have Fun!!"},
+      ],
+  })
+
+``` 
 
 ### Engineering Design Process + Skills
 I am currently on step 5 of the [Engineering Design Process](https://hstatsep.github.io/students/#edp), which is creating a prototype. Throughout the whole process, me and my partner are still tinkering with our tool using the playground. We are slowly working towards the MVP of our freedom project. So far, we have make our own sprites for our platformer game. As I continue to tinker and explore with the components, I have a better understanding of how my interactive game is going to do. My next step is to continue making progress on making our own platformer game and try to improve it by adding additional pieces to our game after we have completed our MVP. Throughout this progress, I had improved in skills such as collaboration and communication. Me and my partner had to communicate with each other about how and what kind of character we want our sprites to look like. We were cooperating with each other by splitting up the sprites, where we each do a few. 
