@@ -5,7 +5,7 @@ by X
 The "Freedom Project" for SEP11 is all about X. The purpose of this blog is to X.
 
 ## Content
-For my project, I am making X. This blog will walk through my process of independently studying X in order to make X.
+For my project, I am making an interactive game using Kaboom. This blog will walk through my process of independently studying Kaboom in order to make my interactive game.
 
 ## Links
 
